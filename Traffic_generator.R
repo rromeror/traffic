@@ -1,6 +1,6 @@
 traffic_pattern <- function (service_type,commited = 1, peak = 200, gap, range = 1:2, time_intervals = 1, distribution){
  
- traffic <- vector("numeric", length = time_intervals)
+traffic <- vector("numeric", length = time_intervals)
  traffic = rnorm(length(traffic),commited,gap)
   if(service_type == 1){
        traffic[range] = rnorm(length(range),peak,gap) 
@@ -25,6 +25,7 @@ traffic_pattern <- function (service_type,commited = 1, peak = 200, gap, range =
    plot(traffic)
    traffic <- data.frame("Time Slot" = 1:length(traffic), "Bandwidth" = traffic )
    traffic
+   plot(traffic)
 }
 
 
