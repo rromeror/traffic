@@ -22,7 +22,6 @@ traffic <- vector("numeric", length = time_intervals)
        traffic <- NULL
    }
    print(traffic)
-   plot(traffic)
    traffic <- data.frame("Time Slot" = 1:length(traffic), "Bandwidth" = traffic )
    traffic
    plot(traffic)
